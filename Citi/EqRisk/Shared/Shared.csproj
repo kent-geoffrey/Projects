@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Citi.EqRisk.Shared</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="riskfeed.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.7.0" />
+    <PackageReference Include="Grpc" Version="1.21.0" />
+    <PackageReference Include="Grpc.Tools" Version="1.21.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="JetBrains.Annotations" Version="2019.1.1" />
+    <PackageReference Include="System.Reactive" Version="4.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="riskfeed.proto" />
+  </ItemGroup>
+
+</Project>
